@@ -21,6 +21,6 @@ clean: clean-build clean-pyc clean-version clean-cov
 
 test:
 	nosetests -s -v skfuzzy
-
+	flake8 --exclude=test_* skfuzzy docs/examples
 coverage: clean-cov
 	nosetests skfuzzy --with-coverage --cover-package=skfuzzy
